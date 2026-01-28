@@ -59,17 +59,24 @@ main1 {
        opacity: 0.9; 
        display:flex; 
        color: white;
+       background: rgba(0, 0, 0, 0.55);
       } 
 /* titolo */
 .hero h1 {
   position: relative;
   z-index: 2;
-
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-
+   font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.4)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   color: #ffffff;
   text-align: center;
 }
