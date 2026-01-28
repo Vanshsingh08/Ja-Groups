@@ -1,0 +1,251 @@
+/* --- CSS PULITO E CONSOLIDATO (jagroups.eu) --- */
+
+/* 1. CSS Reset e Regole Universali */
+* {
+    /* Essenziale per il layout: padding e border inclusi nella larghezza */
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    /* FIX: Impedisce lo scorrimento orizzontale, anche contro gli effetti AOS */
+    overflow-x: hidden !important; 
+}
+
+/* Regola di sicurezza generale per le immagini */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Sezioni e Titoli */
+section {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff9900;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+main1 {
+    font-weight: bold;
+}
+
+.p1 {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+
+/* 3. Sezione Hero */
+.hero {
+    background-color: #fff;
+    background-image: url('../image/logo-ja-group.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    opacity: 0.9;
+    display: flex;
+    color: white;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 26px;
+    background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+
+/* 4. Sezione Proprietario (Chi Siamo) */
+.owner-section {
+    background-color: #f4f4f4;
+    padding: 60px 5%;
+    /* FIX AOS: Assicura che i contenitori principali non vadano fuori schermo */
+    max-width: 100vw; 
+    margin: 0 auto; 
+    overflow-x: hidden; 
+}
+
+.owner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.owner-photo {
+    width: 300px;
+    height: 200px;
+    object-fit: contain; 
+    object-position: center; 
+    border-radius: 10px;
+    border: 4px solid #ff9900;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owner-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.owner-text h3 {
+    color: #000;
+    text-align: center;
+}
+
+
+/* 5. Vetrina Attività */
+.vetrina {
+    background-color: #fff;
+    /* FIX AOS */
+    max-width: 100vw; 
+    margin: 0 auto; 
+    overflow-x: hidden; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* FIX AOS: Regola di sicurezza universale per gli elementi animati */
+[data-aos] {
+    max-width: 100% !important; 
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h4 {
+    color: #000;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+.card p {
+    color: #666;
+    padding: 0 15px;
+    font-size: 0.9em;
+}
+
+/* Pulsante */
+.btn {
+    display: inline-block;
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+/* 6. Sezione Contatti */
+.contatti {
+    background-color: #f4f4f4;
+    /* FIX AOS */
+    max-width: 100vw; 
+    margin: 0 auto; 
+    overflow-x: hidden; 
+}
+
+/* 7. Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8em;
+}
+
+/* 8. Media Query per Desktop */
+@media (min-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+
+    .card-container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .owner-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .owner-photo {
+        width: 350px;
+        height: 230px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .owner-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .owner-text h3 {
+        text-align: left;
+    }
+}
+
+/* CARD SPECIALE: MONTE CIMONE (Regole specifiche) */
+.card.special {
+    position: relative;
+    overflow: hidden;
+}
