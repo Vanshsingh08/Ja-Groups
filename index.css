@@ -51,22 +51,14 @@ main1 {
 }
 
 /* ===== HERO SECTION ===== */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* schermo intero */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-image: url("logo-ja-group.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  background-color: #0f0f0f; /* fallback */
-}
-
+.hero { background-color: #fff;
+       background-image: url('../logo-ja-group.png'); 
+       background-repeat: no-repeat;
+       background-position: center center; background-size: 100%;
+       opacity: 0.9; 
+       display:flex; 
+       color: white;
+      } 
 /* overlay scuro */
 .hero::before {
   content: "";
