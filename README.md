@@ -1,1 +1,1 @@
-# Ja-Groups
+# Ja Groups
